@@ -179,10 +179,10 @@ if __name__=='__main__':
     LCD.rect(208,103,20,20,LCD.red)
     
     LCD.show()
-    key0 = Pin(15,Pin.IN)
-    key1 = Pin(17,Pin.IN)
-    key2 = Pin(2 ,Pin.IN)
-    key3 = Pin(3 ,Pin.IN)
+    key0 = Pin(15,Pin.IN, Pin.PULL_UP)
+    key1 = Pin(17,Pin.IN, Pin.PULL_UP)
+    key2 = Pin(2 ,Pin.IN, Pin.PULL_UP)
+    key3 = Pin(3 ,Pin.IN, Pin.PULL_UP)
     while(1):
         if(key0.value() == 0):
             LCD.fill_rect(12,12,20,20,LCD.red)
